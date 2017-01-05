@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBImobiliarioModelStoreContainer" CdmEntityContainer="DBImobiliarioEntities">
+    <EntitySetMapping Name="Adminidtrador">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Adminidtrador">
+        <MappingFragment StoreEntitySet="Adminidtrador">
+          <ScalarProperty Name="IdAdminidtrador" ColumnName="IdAdminidtrador" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="DataInicioAd" ColumnName="DataInicioAd" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+          <ScalarProperty Name="Pessoa_IdPessoa" ColumnName="Pessoa_IdPessoa" />
+          <ScalarProperty Name="Utilizador_IdUtilizador" ColumnName="Utilizador_IdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ano">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Ano">
+        <MappingFragment StoreEntitySet="Ano">
+          <ScalarProperty Name="IdAno" ColumnName="IdAno" />
+          <ScalarProperty Name="NumeroAno" ColumnName="NumeroAno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arrendatario">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Arrendatario">
+        <MappingFragment StoreEntitySet="Arrendatario">
+          <ScalarProperty Name="IdArrendatario" ColumnName="IdArrendatario" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="Pessoa_IdPessoa" ColumnName="Pessoa_IdPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Linkedlin" ColumnName="Linkedlin" />
+          <ScalarProperty Name="Twiter" ColumnName="Twiter" />
+          <ScalarProperty Name="Instituto" ColumnName="Instituto" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="AnoEscolar" ColumnName="AnoEscolar" />
+          <ScalarProperty Name="Pessoa_IdPessoa" ColumnName="Pessoa_IdPessoa" />
+          <ScalarProperty Name="Utilizador_IdUtilizador" ColumnName="Utilizador_IdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curso">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Curso">
+        <MappingFragment StoreEntitySet="Curso">
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcionario">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Funcionario">
+        <MappingFragment StoreEntitySet="Funcionario">
+          <ScalarProperty Name="IdFuncionario" ColumnName="IdFuncionario" />
+          <ScalarProperty Name="NInterno" ColumnName="NInterno" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="Pessoa_IdPessoa" ColumnName="Pessoa_IdPessoa" />
+          <ScalarProperty Name="Utilizador_IdUtilizador" ColumnName="Utilizador_IdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genero">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitacao">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Habitacao">
+        <MappingFragment StoreEntitySet="Habitacao">
+          <ScalarProperty Name="IdHabitacao" ColumnName="IdHabitacao" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="NAssoalhadas" ColumnName="NAssoalhadas" />
+          <ScalarProperty Name="NQuartos" ColumnName="NQuartos" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="AnoConstrucao" ColumnName="AnoConstrucao" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Wifi" ColumnName="Wifi" />
+          <ScalarProperty Name="Tipologia" ColumnName="Tipologia" />
+          <ScalarProperty Name="Arrendatario_IdArrendatario" ColumnName="Arrendatario_IdArrendatario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoricoAluguer">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.HistoricoAluguer">
+        <MappingFragment StoreEntitySet="HistoricoAluguer">
+          <ScalarProperty Name="IdHistoricoAluguer" ColumnName="IdHistoricoAluguer" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+          <ScalarProperty Name="DataReserva" ColumnName="DataReserva" />
+          <ScalarProperty Name="Utilizador_IdUtilizador" ColumnName="Utilizador_IdUtilizador" />
+          <ScalarProperty Name="Room_IdRoom" ColumnName="Room_IdRoom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobbie">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Hobbie">
+        <MappingFragment StoreEntitySet="Hobbie">
+          <ScalarProperty Name="IdHobbie" ColumnName="IdHobbie" />
+          <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imagem">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Imagem">
+        <MappingFragment StoreEntitySet="Imagem">
+          <ScalarProperty Name="IdImagem" ColumnName="IdImagem" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Imagem1" ColumnName="Imagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instituto">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Instituto">
+        <MappingFragment StoreEntitySet="Instituto">
+          <ScalarProperty Name="IdInstituto" ColumnName="IdInstituto" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="CartaoCidado" ColumnName="CartaoCidado" />
+          <ScalarProperty Name="NIF" ColumnName="NIF" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sexo_IdSexo" ColumnName="Sexo_IdSexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PontosInteresse">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.PontosInteresse">
+        <MappingFragment StoreEntitySet="PontosInteresse">
+          <ScalarProperty Name="IdPontosInteresse" ColumnName="IdPontosInteresse" />
+          <ScalarProperty Name="PontoInteresse" ColumnName="PontoInteresse" />
+          <ScalarProperty Name="LocaisReferencia" ColumnName="LocaisReferencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RClienteHoobieSet">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RClienteHoobieSet">
+        <MappingFragment StoreEntitySet="RClienteHoobieSet">
+          <ScalarProperty Name="IdRelacao" ColumnName="IdRelacao" />
+          <ScalarProperty Name="Cliente_IdCliente" ColumnName="Cliente_IdCliente" />
+          <ScalarProperty Name="Hobbie_IdHobbie" ColumnName="Hobbie_IdHobbie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RClienteRInstituto">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RClienteRInstituto">
+        <MappingFragment StoreEntitySet="RClienteRInstituto">
+          <ScalarProperty Name="IdRInstitutoCursoAno" ColumnName="IdRInstitutoCursoAno" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="RInstitutoCursoAno_IdRInstitutoCursoAno" ColumnName="RInstitutoCursoAno_IdRInstitutoCursoAno" />
+          <ScalarProperty Name="Cliente_IdCliente" ColumnName="Cliente_IdCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelacaoHabitacaRestricao">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RelacaoHabitacaRestricao">
+        <MappingFragment StoreEntitySet="RelacaoHabitacaRestricao">
+          <ScalarProperty Name="IdRelacaoHabitacaRestricao" ColumnName="IdRelacaoHabitacaRestricao" />
+          <ScalarProperty Name="Habitacao_IdHabitacao" ColumnName="Habitacao_IdHabitacao" />
+          <ScalarProperty Name="Restricaoo_IdRestricaoo" ColumnName="Restricaoo_IdRestricaoo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restricaoo">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Restricaoo">
+        <MappingFragment StoreEntitySet="Restricaoo">
+          <ScalarProperty Name="IdRestricaoo" ColumnName="IdRestricaoo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHabitacaoImagem">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RHabitacaoImagem">
+        <MappingFragment StoreEntitySet="RHabitacaoImagem">
+          <ScalarProperty Name="IdRHabitacaoImagem" ColumnName="IdRHabitacaoImagem" />
+          <ScalarProperty Name="IdRHabitacao" ColumnName="IdRHabitacao" />
+          <ScalarProperty Name="IdRImagem" ColumnName="IdRImagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RHabitacaoPontos">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RHabitacaoPontos">
+        <MappingFragment StoreEntitySet="RHabitacaoPontos">
+          <ScalarProperty Name="IdRHabitacaoPontos" ColumnName="IdRHabitacaoPontos" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Habitacao_IdHabitacao" ColumnName="Habitacao_IdHabitacao" />
+          <ScalarProperty Name="PontosInteresse_IdPontosInteresse" ColumnName="PontosInteresse_IdPontosInteresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RInstitutoCursoAno">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.RInstitutoCursoAno">
+        <MappingFragment StoreEntitySet="RInstitutoCursoAno">
+          <ScalarProperty Name="IdRInstitutoCursoAno" ColumnName="IdRInstitutoCursoAno" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Instituto_IdInstituto" ColumnName="Instituto_IdInstituto" />
+          <ScalarProperty Name="Curso_IdCurso" ColumnName="Curso_IdCurso" />
+          <ScalarProperty Name="Ano_IdAno" ColumnName="Ano_IdAno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilizador">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Utilizador">
+        <MappingFragment StoreEntitySet="Utilizador">
+          <ScalarProperty Name="IdUtilizador" ColumnName="IdUtilizador" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="DBImobiliarioModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="IdRoom" ColumnName="IdRoom" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="NCamas" ColumnName="NCamas" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="NJanelas" ColumnName="NJanelas" />
+          <ScalarProperty Name="Sacada" ColumnName="Sacada" />
+          <ScalarProperty Name="Habitacao_IdHabitacao" ColumnName="Habitacao_IdHabitacao" />
+          <ScalarProperty Name="ValorEuros" ColumnName="ValorEuros" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
