@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HumanControlServicos.BO
+namespace ImoBarcelosRest.BO
 {
     public class PessoaArrendatario
     {

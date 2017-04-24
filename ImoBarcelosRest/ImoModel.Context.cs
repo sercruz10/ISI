@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HumanControlServicos
+namespace ImoBarcelosRest
 {
     using System;
     using System.Data.Entity;
