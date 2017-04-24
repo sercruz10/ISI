@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBImobiliarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adminidtrador">
+    <Key>
+      <PropertyRef Name="IdAdminidtrador" />
+    </Key>
+    <Property Name="IdAdminidtrador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataAdmissao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataInicioAd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataFim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pessoa_IdPessoa" Type="int" Nullable="false" />
+    <Property Name="Utilizador_IdUtilizador" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ano">
+    <Key>
+      <PropertyRef Name="IdAno" />
+    </Key>
+    <Property Name="IdAno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroAno" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Arrendatario">
+    <Key>
+      <PropertyRef Name="IdArrendatario" />
+    </Key>
+    <Property Name="IdArrendatario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataInicio" Type="nvarchar(max)" />
+    <Property Name="Pessoa_IdPessoa" Type="int" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Facebook" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Linkedlin" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Twiter" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Instituto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Curso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AnoEscolar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Pessoa_IdPessoa" Type="int" Nullable="false" />
+    <Property Name="Utilizador_IdUtilizador" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="IdCurso" />
+    </Key>
+    <Property Name="IdCurso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+    </Key>
+    <Property Name="IdFuncionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NInterno" Type="int" />
+    <Property Name="DataAdmissao" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pessoa_IdPessoa" Type="int" />
+    <Property Name="Utilizador_IdUtilizador" Type="int" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="IdSexo" />
+    </Key>
+    <Property Name="IdSexo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Habitacao">
+    <Key>
+      <PropertyRef Name="IdHabitacao" />
+    </Key>
+    <Property Name="IdHabitacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NAssoalhadas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NQuartos" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Area" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AnoConstrucao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Internet" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Wifi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tipologia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Arrendatario_IdArrendatario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HistoricoAluguer">
+    <Key>
+      <PropertyRef Name="IdHistoricoAluguer" />
+    </Key>
+    <Property Name="IdHistoricoAluguer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataInicio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataFim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataReserva" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Utilizador_IdUtilizador" Type="int" Nullable="false" />
+    <Property Name="Room_IdRoom" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hobbie">
+    <Key>
+      <PropertyRef Name="IdHobbie" />
+    </Key>
+    <Property Name="IdHobbie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designacao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Imagem">
+    <Key>
+      <PropertyRef Name="IdImagem" />
+    </Key>
+    <Property Name="IdImagem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Filename" Type="nchar" MaxLength="100" />
+    <Property Name="Imagem" Type="image" />
+  </EntityType>
+  <EntityType Name="Instituto">
+    <Key>
+      <PropertyRef Name="IdInstituto" />
+    </Key>
+    <Property Name="IdInstituto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CartaoCidado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NIF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sexo_IdSexo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PontosInteresse">
+    <Key>
+      <PropertyRef Name="IdPontosInteresse" />
+    </Key>
+    <Property Name="IdPontosInteresse" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PontoInteresse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LocaisReferencia" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RClienteHoobieSet">
+    <Key>
+      <PropertyRef Name="IdRelacao" />
+    </Key>
+    <Property Name="IdRelacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cliente_IdCliente" Type="int" Nullable="false" />
+    <Property Name="Hobbie_IdHobbie" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RClienteRInstituto">
+    <Key>
+      <PropertyRef Name="IdRInstitutoCursoAno" />
+    </Key>
+    <Property Name="IdRInstitutoCursoAno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RInstitutoCursoAno_IdRInstitutoCursoAno" Type="int" Nullable="false" />
+    <Property Name="Cliente_IdCliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RelacaoHabitacaRestricao">
+    <Key>
+      <PropertyRef Name="IdRelacaoHabitacaRestricao" />
+    </Key>
+    <Property Name="IdRelacaoHabitacaRestricao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Habitacao_IdHabitacao" Type="int" Nullable="false" />
+    <Property Name="Restricaoo_IdRestricaoo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restricaoo">
+    <Key>
+      <PropertyRef Name="IdRestricaoo" />
+    </Key>
+    <Property Name="IdRestricaoo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHabitacaoImagem">
+    <Key>
+      <PropertyRef Name="IdRHabitacaoImagem" />
+    </Key>
+    <Property Name="IdRHabitacaoImagem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRHabitacao" Type="int" Nullable="false" />
+    <Property Name="IdRImagem" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RHabitacaoPontos">
+    <Key>
+      <PropertyRef Name="IdRHabitacaoPontos" />
+    </Key>
+    <Property Name="IdRHabitacaoPontos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Habitacao_IdHabitacao" Type="int" Nullable="false" />
+    <Property Name="PontosInteresse_IdPontosInteresse" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RInstitutoCursoAno">
+    <Key>
+      <PropertyRef Name="IdRInstitutoCursoAno" />
+    </Key>
+    <Property Name="IdRInstitutoCursoAno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Instituto_IdInstituto" Type="int" Nullable="false" />
+    <Property Name="Curso_IdCurso" Type="int" Nullable="false" />
+    <Property Name="Ano_IdAno" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\ISI\IMOBARCELOSREST\APP_DATA\DBIMOBILIARIO.MDF.dbo.Room' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="IdRoom" />
+      <PropertyRef Name="Descricao" />
+      <PropertyRef Name="NCamas" />
+      <PropertyRef Name="Area" />
+      <PropertyRef Name="NJanelas" />
+      <PropertyRef Name="Sacada" />
+      <PropertyRef Name="Habitacao_IdHabitacao" />
+      <PropertyRef Name="ValorEuros" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdRoom" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NCamas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Area" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NJanelas" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sacada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Habitacao_IdHabitacao" Type="int" Nullable="false" />
+    <Property Name="ValorEuros" Type="float" Nullable="false" />
+    <Property Name="Foto" Type="image" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utilizador">
+    <Key>
+      <PropertyRef Name="IdUtilizador" />
+    </Key>
+    <Property Name="IdUtilizador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AdminidtradorUtilizador">
+    <End Role="Utilizador" Type="Self.Utilizador" Multiplicity="1" />
+    <End Role="Adminidtrador" Type="Self.Adminidtrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizador">
+        <PropertyRef Name="IdUtilizador" />
+      </Principal>
+      <Dependent Role="Adminidtrador">
+        <PropertyRef Name="Utilizador_IdUtilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnoRInstitutoCursoAno">
+    <End Role="Ano" Type="Self.Ano" Multiplicity="1" />
+    <End Role="RInstitutoCursoAno" Type="Self.RInstitutoCursoAno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ano">
+        <PropertyRef Name="IdAno" />
+      </Principal>
+      <Dependent Role="RInstitutoCursoAno">
+        <PropertyRef Name="Ano_IdAno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArrendatarioHabitacao">
+    <End Role="Arrendatario" Type="Self.Arrendatario" Multiplicity="1" />
+    <End Role="Habitacao" Type="Self.Habitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrendatario">
+        <PropertyRef Name="IdArrendatario" />
+      </Principal>
+      <Dependent Role="Habitacao">
+        <PropertyRef Name="Arrendatario_IdArrendatario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteRClienteHoobie">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="RClienteHoobieSet" Type="Self.RClienteHoobieSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="RClienteHoobieSet">
+        <PropertyRef Name="Cliente_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteRClienteRInstituto">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="RClienteRInstituto" Type="Self.RClienteRInstituto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="RClienteRInstituto">
+        <PropertyRef Name="Cliente_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CursoRInstitutoCursoAno">
+    <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+    <End Role="RInstitutoCursoAno" Type="Self.RInstitutoCursoAno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="RInstitutoCursoAno">
+        <PropertyRef Name="Curso_IdCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HabitacaoRelacaoHabitacaRestricao">
+    <End Role="Habitacao" Type="Self.Habitacao" Multiplicity="1" />
+    <End Role="RelacaoHabitacaRestricao" Type="Self.RelacaoHabitacaRestricao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacao">
+        <PropertyRef Name="IdHabitacao" />
+      </Principal>
+      <Dependent Role="RelacaoHabitacaRestricao">
+        <PropertyRef Name="Habitacao_IdHabitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HabitacaoRHabitacaoPontos">
+    <End Role="Habitacao" Type="Self.Habitacao" Multiplicity="1" />
+    <End Role="RHabitacaoPontos" Type="Self.RHabitacaoPontos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacao">
+        <PropertyRef Name="IdHabitacao" />
+      </Principal>
+      <Dependent Role="RHabitacaoPontos">
+        <PropertyRef Name="Habitacao_IdHabitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HabitacaoRoom">
+    <End Role="Habitacao" Type="Self.Habitacao" Multiplicity="1" />
+    <End Role="Room" Type="Self.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacao">
+        <PropertyRef Name="IdHabitacao" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="Habitacao_IdHabitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HobbieRClienteHoobie">
+    <End Role="Hobbie" Type="Self.Hobbie" Multiplicity="1" />
+    <End Role="RClienteHoobieSet" Type="Self.RClienteHoobieSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobbie">
+        <PropertyRef Name="IdHobbie" />
+      </Principal>
+      <Dependent Role="RClienteHoobieSet">
+        <PropertyRef Name="Hobbie_IdHobbie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstitutoRInstitutoCursoAno">
+    <End Role="Instituto" Type="Self.Instituto" Multiplicity="1" />
+    <End Role="RInstitutoCursoAno" Type="Self.RInstitutoCursoAno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instituto">
+        <PropertyRef Name="IdInstituto" />
+      </Principal>
+      <Dependent Role="RInstitutoCursoAno">
+        <PropertyRef Name="Instituto_IdInstituto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaAdminidtrador">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="1" />
+    <End Role="Adminidtrador" Type="Self.Adminidtrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Adminidtrador">
+        <PropertyRef Name="Pessoa_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaArrendatario">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Arrendatario" Type="Self.Arrendatario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Arrendatario">
+        <PropertyRef Name="Pessoa_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaCliente">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Pessoa_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PessoaFuncionario">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="Pessoa_IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PontosInteresseRHabitacaoPontos">
+    <End Role="PontosInteresse" Type="Self.PontosInteresse" Multiplicity="1" />
+    <End Role="RHabitacaoPontos" Type="Self.RHabitacaoPontos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PontosInteresse">
+        <PropertyRef Name="IdPontosInteresse" />
+      </Principal>
+      <Dependent Role="RHabitacaoPontos">
+        <PropertyRef Name="PontosInteresse_IdPontosInteresse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RestricaooRelacaoHabitacaRestricao">
+    <End Role="Restricaoo" Type="Self.Restricaoo" Multiplicity="1" />
+    <End Role="RelacaoHabitacaRestricao" Type="Self.RelacaoHabitacaRestricao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restricaoo">
+        <PropertyRef Name="IdRestricaoo" />
+      </Principal>
+      <Dependent Role="RelacaoHabitacaRestricao">
+        <PropertyRef Name="Restricaoo_IdRestricaoo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RHabitacaoImagem_Habitacao">
+    <End Role="Habitacao" Type="Self.Habitacao" Multiplicity="1" />
+    <End Role="RHabitacaoImagem" Type="Self.RHabitacaoImagem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacao">
+        <PropertyRef Name="IdHabitacao" />
+      </Principal>
+      <Dependent Role="RHabitacaoImagem">
+        <PropertyRef Name="IdRHabitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RHabitacaoImagem_Imagem">
+    <End Role="Imagem" Type="Self.Imagem" Multiplicity="1" />
+    <End Role="RHabitacaoImagem" Type="Self.RHabitacaoImagem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagem">
+        <PropertyRef Name="IdImagem" />
+      </Principal>
+      <Dependent Role="RHabitacaoImagem">
+        <PropertyRef Name="IdRImagem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RInstitutoCursoAnoRClienteRInstituto">
+    <End Role="RInstitutoCursoAno" Type="Self.RInstitutoCursoAno" Multiplicity="1" />
+    <End Role="RClienteRInstituto" Type="Self.RClienteRInstituto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RInstitutoCursoAno">
+        <PropertyRef Name="IdRInstitutoCursoAno" />
+      </Principal>
+      <Dependent Role="RClienteRInstituto">
+        <PropertyRef Name="RInstitutoCursoAno_IdRInstitutoCursoAno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SexoPessoa">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="IdSexo" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="Sexo_IdSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtilizadorCliente">
+    <End Role="Utilizador" Type="Self.Utilizador" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizador">
+        <PropertyRef Name="IdUtilizador" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Utilizador_IdUtilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtilizadorFuncionario">
+    <End Role="Utilizador" Type="Self.Utilizador" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="Self.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizador">
+        <PropertyRef Name="IdUtilizador" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="Utilizador_IdUtilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UtilizadorHistoricoAluguer">
+    <End Role="Utilizador" Type="Self.Utilizador" Multiplicity="1" />
+    <End Role="HistoricoAluguer" Type="Self.HistoricoAluguer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizador">
+        <PropertyRef Name="IdUtilizador" />
+      </Principal>
+      <Dependent Role="HistoricoAluguer">
+        <PropertyRef Name="Utilizador_IdUtilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBImobiliarioModelStoreContainer">
+    <EntitySet Name="Adminidtrador" EntityType="Self.Adminidtrador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ano" EntityType="Self.Ano" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arrendatario" EntityType="Self.Arrendatario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Curso" EntityType="Self.Curso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genero" EntityType="Self.Genero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Habitacao" EntityType="Self.Habitacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoricoAluguer" EntityType="Self.HistoricoAluguer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobbie" EntityType="Self.Hobbie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Imagem" EntityType="Self.Imagem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instituto" EntityType="Self.Instituto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pessoa" EntityType="Self.Pessoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PontosInteresse" EntityType="Self.PontosInteresse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RClienteHoobieSet" EntityType="Self.RClienteHoobieSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RClienteRInstituto" EntityType="Self.RClienteRInstituto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RelacaoHabitacaRestricao" EntityType="Self.RelacaoHabitacaRestricao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restricaoo" EntityType="Self.Restricaoo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHabitacaoImagem" EntityType="Self.RHabitacaoImagem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RHabitacaoPontos" EntityType="Self.RHabitacaoPontos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RInstitutoCursoAno" EntityType="Self.RInstitutoCursoAno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilizador" EntityType="Self.Utilizador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Room].[IdRoom] AS [IdRoom], 
+    [Room].[Descricao] AS [Descricao], 
+    [Room].[NCamas] AS [NCamas], 
+    [Room].[Area] AS [Area], 
+    [Room].[NJanelas] AS [NJanelas], 
+    [Room].[Sacada] AS [Sacada], 
+    [Room].[Habitacao_IdHabitacao] AS [Habitacao_IdHabitacao], 
+    [Room].[ValorEuros] AS [ValorEuros], 
+    [Room].[Foto] AS [Foto], 
+    [Room].[Estado] AS [Estado]
+    FROM [dbo].[Room] AS [Room]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AdminidtradorUtilizador" Association="Self.FK_AdminidtradorUtilizador">
+      <End Role="Utilizador" EntitySet="Utilizador" />
+      <End Role="Adminidtrador" EntitySet="Adminidtrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnoRInstitutoCursoAno" Association="Self.FK_AnoRInstitutoCursoAno">
+      <End Role="Ano" EntitySet="Ano" />
+      <End Role="RInstitutoCursoAno" EntitySet="RInstitutoCursoAno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArrendatarioHabitacao" Association="Self.FK_ArrendatarioHabitacao">
+      <End Role="Arrendatario" EntitySet="Arrendatario" />
+      <End Role="Habitacao" EntitySet="Habitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteRClienteHoobie" Association="Self.FK_ClienteRClienteHoobie">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="RClienteHoobieSet" EntitySet="RClienteHoobieSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteRClienteRInstituto" Association="Self.FK_ClienteRClienteRInstituto">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="RClienteRInstituto" EntitySet="RClienteRInstituto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CursoRInstitutoCursoAno" Association="Self.FK_CursoRInstitutoCursoAno">
+      <End Role="Curso" EntitySet="Curso" />
+      <End Role="RInstitutoCursoAno" EntitySet="RInstitutoCursoAno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HabitacaoRelacaoHabitacaRestricao" Association="Self.FK_HabitacaoRelacaoHabitacaRestricao">
+      <End Role="Habitacao" EntitySet="Habitacao" />
+      <End Role="RelacaoHabitacaRestricao" EntitySet="RelacaoHabitacaRestricao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HabitacaoRHabitacaoPontos" Association="Self.FK_HabitacaoRHabitacaoPontos">
+      <End Role="Habitacao" EntitySet="Habitacao" />
+      <End Role="RHabitacaoPontos" EntitySet="RHabitacaoPontos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HabitacaoRoom" Association="Self.FK_HabitacaoRoom">
+      <End Role="Habitacao" EntitySet="Habitacao" />
+      <End Role="Room" EntitySet="Room" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HobbieRClienteHoobie" Association="Self.FK_HobbieRClienteHoobie">
+      <End Role="Hobbie" EntitySet="Hobbie" />
+      <End Role="RClienteHoobieSet" EntitySet="RClienteHoobieSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstitutoRInstitutoCursoAno" Association="Self.FK_InstitutoRInstitutoCursoAno">
+      <End Role="Instituto" EntitySet="Instituto" />
+      <End Role="RInstitutoCursoAno" EntitySet="RInstitutoCursoAno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaAdminidtrador" Association="Self.FK_PessoaAdminidtrador">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Adminidtrador" EntitySet="Adminidtrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaArrendatario" Association="Self.FK_PessoaArrendatario">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Arrendatario" EntitySet="Arrendatario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaCliente" Association="Self.FK_PessoaCliente">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PessoaFuncionario" Association="Self.FK_PessoaFuncionario">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PontosInteresseRHabitacaoPontos" Association="Self.FK_PontosInteresseRHabitacaoPontos">
+      <End Role="PontosInteresse" EntitySet="PontosInteresse" />
+      <End Role="RHabitacaoPontos" EntitySet="RHabitacaoPontos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RestricaooRelacaoHabitacaRestricao" Association="Self.FK_RestricaooRelacaoHabitacaRestricao">
+      <End Role="Restricaoo" EntitySet="Restricaoo" />
+      <End Role="RelacaoHabitacaRestricao" EntitySet="RelacaoHabitacaRestricao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RHabitacaoImagem_Habitacao" Association="Self.FK_RHabitacaoImagem_Habitacao">
+      <End Role="Habitacao" EntitySet="Habitacao" />
+      <End Role="RHabitacaoImagem" EntitySet="RHabitacaoImagem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RHabitacaoImagem_Imagem" Association="Self.FK_RHabitacaoImagem_Imagem">
+      <End Role="Imagem" EntitySet="Imagem" />
+      <End Role="RHabitacaoImagem" EntitySet="RHabitacaoImagem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RInstitutoCursoAnoRClienteRInstituto" Association="Self.FK_RInstitutoCursoAnoRClienteRInstituto">
+      <End Role="RInstitutoCursoAno" EntitySet="RInstitutoCursoAno" />
+      <End Role="RClienteRInstituto" EntitySet="RClienteRInstituto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SexoPessoa" Association="Self.FK_SexoPessoa">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtilizadorCliente" Association="Self.FK_UtilizadorCliente">
+      <End Role="Utilizador" EntitySet="Utilizador" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtilizadorFuncionario" Association="Self.FK_UtilizadorFuncionario">
+      <End Role="Utilizador" EntitySet="Utilizador" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UtilizadorHistoricoAluguer" Association="Self.FK_UtilizadorHistoricoAluguer">
+      <End Role="Utilizador" EntitySet="Utilizador" />
+      <End Role="HistoricoAluguer" EntitySet="HistoricoAluguer" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
